@@ -1,7 +1,11 @@
+import GlobalStyle from "./styles/GlobalStyle/GlobalStyle.js"
+import Main from "./pages/Main";
+
 function App() {
   return (
-    <div className="App">
-      hello I'm chaehyun
+    <div>
+      <GlobalStyle />
+      <Main />
     </div>
   );
 }
