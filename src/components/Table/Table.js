@@ -1,6 +1,15 @@
+import { useEffect } from "react";
 import "../../styles/Table/table.scss"
+import {getData} from "../../utils/getData.js"
+
 function Table() {
-    return (
+
+  useEffect(() => {
+    getData();
+}, [])
+
+    
+  return (
       <div className="table_wrapper">
        Table
       </div>
