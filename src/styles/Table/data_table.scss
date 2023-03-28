@@ -9,6 +9,50 @@
 .table_container{
    width: 80vw;
     height: 70vh;
+    .tmph{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: aquamarine;
+    }
+    .tmpl1{
+        background-color: aqua;
+        position: sticky; 
+        left: 0; 
+    }
+    .tmpl2{
+        background-color: red;
+        position: sticky; 
+        left: 49px; 
+    }
+    .tmpl3{
+        background-color: yellow;
+        position: sticky; 
+        left: 105px; 
+    }
+    .tmpr{
+        background-color: blue;
+        position: sticky; 
+        left: 0.1;
+        z-index: 1;  
+    }
+    
+    .tmpr1{
+        background-color: pink;
+        position: sticky; 
+        right: 0; 
+    }
+    .tmpr2{
+        background-color: pink;
+        position: sticky; 
+        right: 49px; 
+    }
+    
+    .tmpr3{
+        background-color: paleturquoise;
+        position: sticky; 
+        right: 100px; 
+    }
 
 }
 }
