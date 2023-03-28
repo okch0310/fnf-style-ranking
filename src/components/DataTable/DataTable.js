@@ -74,7 +74,7 @@ function DataTable(props) {
               
               <TableCell><img className="image" alt="제품 이미지" src={data.image_name}></img></TableCell>
               <TableCell>{data.tag_price}</TableCell>
-              <TableCell>{data.discount}</TableCell>
+              <TableCell>{data.discount}%</TableCell>
               <TableCell>{data.prdt_nm}</TableCell>
               
               <TableCell>{data.sale_qty_kor_ttl}</TableCell>
@@ -89,7 +89,7 @@ function DataTable(props) {
               <TableCell>{data.wh_stock_qty_kor}</TableCell>
               <TableCell className="tmpr3">{data.stock_qty_kor}</TableCell>
               <TableCell className="tmpr2">{data.woi}</TableCell>
-              <TableCell className="tmpr1">{data.sale_rate}</TableCell>
+              <TableCell className="tmpr1">{data.sale_rate}%</TableCell>
               
                   </>
               )):console.log("f")
