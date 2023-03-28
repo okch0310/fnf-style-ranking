@@ -13,45 +13,52 @@
         position: sticky;
         top: 0;
         z-index: 1;
-        background-color: aquamarine;
+        background-color: white;
     }
     .tmpl1{
-        background-color: aqua;
+ 
         position: sticky; 
         left: 0; 
+        background-color: white;
     }
     .tmpl2{
-        background-color: red;
+    
         position: sticky; 
         left: 49px; 
+        background-color: white;
     }
     .tmpl3{
-        background-color: yellow;
+     
         position: sticky; 
         left: 105px; 
+        background-color: white;
     }
     .tmpr{
-        background-color: blue;
+
         position: sticky; 
         left: 0.1;
         z-index: 1;  
+        background-color: white;
     }
     
     .tmpr1{
-        background-color: pink;
+        
         position: sticky; 
         right: 0; 
+        background-color: white;
     }
     .tmpr2{
-        background-color: pink;
+       
         position: sticky; 
         right: 49px; 
+        background-color: white;
     }
     
     .tmpr3{
-        background-color: paleturquoise;
+
         position: sticky; 
         right: 100px; 
+        background-color: white;
     }
 
 }
