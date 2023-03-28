@@ -9,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Box } from '@mui/material';
 
 
 function DataTable(props) {
@@ -20,9 +21,15 @@ function DataTable(props) {
   console.log(dt)
 
   return (
-    <div className="table_wrapper">
-      <TableContainer className="table_container" component={Paper}>
-        <Table sx={{ minWidth: 650 }} stickyHeader aria-label="sticky table"  >
+    
+<div className="table_wrapper">
+
+      <TableContainer className="table_container" sx={{maxWidth: '100%', overflowX: 'auto'
+       
+  }} component={Paper}>
+      
+        <Table stickyHeader aria-label="sticky table"  >
+       
           <TableHead>
             <TableRow>
               <TableCell align="right" className="tmp" >랭킹</TableCell>
@@ -52,7 +59,6 @@ function DataTable(props) {
       
            
           </TableHead>
-          
           <TableBody>  
             {
               Array.isArray(props.tableData) ? props.tableData.map((data) => (
@@ -90,9 +96,14 @@ function DataTable(props) {
             
             
           </TableBody>
+          
         </Table>
+       
       </TableContainer>
+      
     </div>
+
+    
   );
 }
 
