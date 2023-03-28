@@ -35,8 +35,8 @@ function DataTable(props) {
               <TableCell className="tmpl1" align="right">랭킹</TableCell>
               
               <TableCell  className="tmpl2" align="right">상승</TableCell>
-              <TableCell className="tmpl3" align="right">품번</TableCell>
-              <TableCell align="right">대표품번</TableCell>
+              
+              <TableCell className="tmpl3" align="right">대표품번</TableCell>
               <TableCell align="right">이미지</TableCell>
               <TableCell align="right">택가</TableCell>
               <TableCell align="right">할인율</TableCell>
@@ -70,8 +70,8 @@ function DataTable(props) {
                 ></TableRow>
                   <TableCell className="tmpl1" >{data.ranking}</TableCell>
               <TableCell className="tmpl2">{data.rank_growth}</TableCell>
-              <TableCell className="tmpl3" >{data.repr_cd}</TableCell>
-              <TableCell>{data.prdt_cd}</TableCell>
+              <TableCell className="tmpl3" >{data.prdt_cd}</TableCell>
+              
               <TableCell><img className="image" alt="제품 이미지" src={data.image_name}></img></TableCell>
               <TableCell>{data.tag_price}</TableCell>
               <TableCell>{data.discount}</TableCell>
