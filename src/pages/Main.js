@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import DataTable from "../components/DataTable/DataTable";
 //import {GetData, tableData} from "../utils/GetData"
 import { useState, useEffect } from "react";
+import "../styles/Main/main.scss";
 
 function Main() {
 
@@ -24,8 +25,12 @@ function Main() {
     return (
       <div>
         <Header/>
-        <FilterWrapper/>
-        <DataTable tableData={tableData}/>
+
+        <FilterWrapper />
+       
+        <DataTable tableData={tableData} />
+   
+        
       </div>
     );
   }

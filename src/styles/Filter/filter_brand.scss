@@ -1,0 +1,49 @@
+.dropdown_s_wrapper{
+    background-color: pink;
+    width: 200px;
+    height:50px;
+    z-index: 2;
+    display:flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-between;
+
+    
+    .brand_name{
+       
+        //background-color: aquamarine;
+        font-size: 20px;
+        text-align: center;
+        margin-left:10px ;
+       
+    }
+    .icon{
+        
+        //background-color: pink;
+        font-size: 20px;
+        margin-left:5px ;
+        margin-right:5px ;
+
+    }
+}
+
+.dropdown_b_wrapper_n{
+    display: none;
+}
+.dropdown_b_wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color:pink;
+    border-radius: 5px;
+    height: 200px;
+    margin-top: 5px;
+
+    .brand{
+        background-color: pink;
+        margin: 5px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: 500;
+    }
+}
