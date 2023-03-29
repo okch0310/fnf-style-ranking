@@ -22,7 +22,7 @@ function DataTable(props) {
 function CustomTableCell(props) {
   const { value } = props;
   return (
-    <TableCell >
+    <TableCell align="center">
       <NumericFormat value={value} displayType={'text'} thousandSeparator={true} />
     </TableCell>
   );
@@ -31,7 +31,7 @@ function CustomTableCell(props) {
 function CustomTableCell2(props) {
   const { value } = props;
   return (
-    <TableCell sx={{  backgroundColor:'white'}} className="tmpr3">
+    <TableCell sx={{  backgroundColor:'white'}} className="tmpr3" align="center">
       <NumericFormat value={value} displayType={'text'} thousandSeparator={true} />
     </TableCell>
   );
@@ -51,30 +51,30 @@ function CustomTableCell2(props) {
        <TableHead className="tmph">
          <TableRow >
          
-           <TableCell sx={{ backgroundColor:'white' , width:'50px' }} className="tmpl1" align="right">랭킹</TableCell>
+           <TableCell sx={{ backgroundColor:'white' , width:'50px' }} className="tmpl1" align="center">랭킹</TableCell>
            
-           <TableCell sx={{ backgroundColor:'white' , width:'50px' }} className="tmpl2_black" align="right">상승</TableCell>
+           <TableCell sx={{ backgroundColor:'white' , width:'50px' }} className="tmpl2_black" align="center">상승</TableCell>
            
-           <TableCell sx={{  backgroundColor:'white' , width:'100px' }}className="tmpl3" align="right">대표품번</TableCell>
-           <TableCell sx={{  backgroundColor:'white' , width:'50px' }} className="tmpl4" align="right">이미지</TableCell>
-           <TableCell sx={{  width:'100px' }} align="right">택가</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">할인율</TableCell>
-           <TableCell sx={{  width:'150px' }} align="right">제품명</TableCell>
-           {/* <TableCell align="right">추이</TableCell> */}
-           <TableCell sx={{  width:'50px' }} align="right">수량</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">국내</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">면세</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">RF도매</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">실판</TableCell>
-           <TableCell align="right">협력사</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">판매액</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">누적판매량</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">누적입고량</TableCell>
-           <TableCell sx={{  width:'50px' }} align="right">물류재고</TableCell>
+           <TableCell sx={{  backgroundColor:'white' , width:'100px' }}className="tmpl3" align="center">대표품번</TableCell>
+           <TableCell sx={{  backgroundColor:'white' , width:'50px' }} className="tmpl4" align="center">이미지</TableCell>
+           <TableCell sx={{  width:'100px' }} align="center">택가</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">할인율</TableCell>
+           <TableCell sx={{  width:'150px' }} align="center">제품명</TableCell>
+           {/* <TableCell align="center">추이</TableCell> */}
+           <TableCell sx={{  width:'50px' }} align="center">수량</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">국내</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">면세</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">RF도매</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">실판</TableCell>
+           <TableCell align="center">협력사</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">판매액</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">누적판매량</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">누적입고량</TableCell>
+           <TableCell sx={{  width:'50px' }} align="center">물류재고</TableCell>
            
-           <TableCell sx={{  backgroundColor:'white' ,width:'50px' }} className="tmpr3" align="right">총재고</TableCell>
-           <TableCell sx={{  backgroundColor:'white' ,width:'50px' }} className="tmpr2" align="right">재고주수</TableCell>
-           <TableCell sx={{  backgroundColor:'white' ,width:'50px' }} className="tmpr1" align="right">판매율</TableCell>
+           <TableCell sx={{  backgroundColor:'white' ,width:'50px' }} className="tmpr3" align="center">총재고</TableCell>
+           <TableCell sx={{  backgroundColor:'white' ,width:'50px' }} className="tmpr2" align="center">재고주수</TableCell>
+           <TableCell sx={{  backgroundColor:'white' ,width:'50px' }} className="tmpr1" align="center">판매율</TableCell>
 
          </TableRow>
    
@@ -89,24 +89,24 @@ function CustomTableCell2(props) {
               //  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                
              ></TableRow>
-               <TableCell className="tmpl1" sx={{  backgroundColor:'white'}} >{data.ranking}</TableCell>
-           <TableCell  className={data.rank_growth.includes("↑") ? "tmpl2_red" : "tmpl2_black"} sx={{  backgroundColor:'white'}}>{data.rank_growth}</TableCell>
-           <TableCell  className="tmpl3" sx={{  backgroundColor:'white'}}>{data.prdt_cd}</TableCell>
+               <TableCell className="tmpl1" sx={{  backgroundColor:'white'}} align="center">{data.ranking}</TableCell>
+           <TableCell  className={data.rank_growth.includes("↑") ? "tmpl2_red" : "tmpl2_black" } sx={{  backgroundColor:'white'}} align="center">{data.rank_growth}</TableCell>
+           <TableCell  className="tmpl3" sx={{  backgroundColor:'white'}} align="center">{data.prdt_cd}</TableCell>
 
           
 
-           <TableCell  className="tmpl4" sx={{  backgroundColor:'white'}}><img className="image" alt="제품 이미지" src={data.image_name}></img></TableCell>
-           <TableCell >{data.tag_price}</TableCell>
-           <TableCell >{data.discount}%</TableCell>
-           <TableCell >{data.prdt_nm}</TableCell>
+           <TableCell  className="tmpl4" sx={{  backgroundColor:'white'}} align="center"><img className="image" alt="제품 이미지" src={data.image_name}></img></TableCell>
+           <TableCell align="center" >{data.tag_price}</TableCell>
+           <TableCell align="center" >{data.discount}%</TableCell>
+           <TableCell  align="center">{data.prdt_nm}</TableCell>
            
-           <TableCell >{data.sale_qty_kor_ttl}</TableCell>
-           <TableCell >{data.sale_qty_kor_retail}</TableCell>
-           <TableCell >{data.sale_qty_kor_duty}</TableCell>
-           <TableCell >{data.sale_qty_kor_rfwholesale}</TableCell>
+           <TableCell align="center">{data.sale_qty_kor_ttl}</TableCell>
+           <TableCell align="center">{data.sale_qty_kor_retail}</TableCell>
+           <TableCell align="center">{data.sale_qty_kor_duty}</TableCell>
+           <TableCell align="center">{data.sale_qty_kor_rfwholesale}</TableCell>
            <CustomTableCell value={data.asp}/>
-           <TableCell >{data.mfac_compy_nm_list}</TableCell>
-           <TableCell >{data.sale_amt_kor_ttl}</TableCell>
+           <TableCell align="center">{data.mfac_compy_nm_list}</TableCell>
+           <TableCell align="center">{data.sale_amt_kor_ttl}</TableCell>
 
            
            <CustomTableCell value={data.ac_sale_qty_cns}/>
@@ -117,8 +117,8 @@ function CustomTableCell2(props) {
           
            
            
-           <TableCell sx={{  backgroundColor:'white'}} className="tmpr2">{data.woi}</TableCell>
-           <TableCell sx={{  backgroundColor:'white'}} className="tmpr1">{data.sale_rate}%</TableCell>
+           <TableCell sx={{  backgroundColor:'white'}} className="tmpr2" align="center">{data.woi}</TableCell>
+           <TableCell sx={{  backgroundColor:'white'}} className="tmpr1" align="center">{data.sale_rate}%</TableCell>
            
                </>
            )):console.log("f")
