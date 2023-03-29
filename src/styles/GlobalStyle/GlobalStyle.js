@@ -14,7 +14,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+ caption,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -45,10 +45,7 @@ q:before, q:after {
 content: '';
 content: none;
 }
-table {
-border-collapse: collapse;
-border-spacing: 0;
-}
+
 `;
 
 export default GlobalStyle;
