@@ -19,13 +19,22 @@
  
         position: sticky; 
         left: 0; 
-        background-color: white;
+        //  background-color: white;
+        
     }
-    .tmpl2{
+    .tmpl2_red{
     
         position: sticky; 
         left: 49px; 
         background-color: white;
+        color: red;
+    }
+    .tmpl2_black{
+    
+        position: sticky; 
+        left: 49px; 
+        background-color: white;
+        color: black;
     }
     .tmpl3{
      
@@ -46,6 +55,7 @@
         position: sticky; 
         right: 0; 
         background-color: white;
+        
     }
     .tmpr2{
        
@@ -59,6 +69,13 @@
         position: sticky; 
         right: 100px; 
         background-color: white;
+    }
+
+    .tmp{
+        height: 43px;
+    }
+    .d{
+        background-color: aqua;
     }
 
 }
