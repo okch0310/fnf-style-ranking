@@ -4,11 +4,12 @@ import FilterDate from "./FilterDate";
 import "../../styles/Filter/filter_wrapper.scss"
 
 function FilterWrapper() {
+ 
     return (
       <div className="filter_wrapper">
        <FilterBrand/>
         <FilterDate/>
-        <BtnSearch/>
+        <BtnSearch />
       </div>
     );
   }
