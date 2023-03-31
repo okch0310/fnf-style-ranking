@@ -14,9 +14,7 @@ import { NumericFormat } from 'react-number-format';
 
 function DataTable(props) {
 //data props로 넘겨 받기
-  console.log("넘어가?", props.tableData)
-  const dt= Array.from(props.tableData);
-  console.log(dt)
+  console.log("[DataTable.js] props.tableData ?", props.tableData)
 
 // 숫자에 , 추가
 function CustomTableCell(props) {

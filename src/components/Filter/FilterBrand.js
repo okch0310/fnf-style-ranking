@@ -1,16 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../../styles/Filter/filter_brand.scss";
 
 function FilterBrand() {
   const [dropdown, setDropdown]=useState(false);
+  const [brand, setBrand]=useState("");
   
   function clickDropdown(){
     console.log("click")
     setDropdown(!dropdown);
-    console.log("dropdown상태:",dropdown);
   }
+  
   function clickMLB(){
-    console.log("mlb click")
+    
+    setBrand("M");
+  }
+  function clickDISCOVERY(){
+
+    postBrandName("X");
+  }
+
+  function clickMLBKids(){
+ 
+    postBrandName("I");
+
+  }
+  function clickSA(){
+    
+   postBrandName("A");
+  }
+  function clickDV(){
+   postBrandName("V");
+  }
+
+  useEffect(() => {
+    console.log("브랜드 이름:", brand);
+    setBrand(brand);
+  }, [brand]);
+
+  function postBrandName(t){
+    console.log("[1.postBrandName]함수 내부: 브랜드 이름:",t);
+    fetch("http://localhost:8000/brand_name", {
+            method : "POST",          
+            headers: {
+                "Content-Type": "application/json",
+              },
+            body: JSON.stringify({ brand: `${t}` }),   //실제 데이터 파싱하여 body에 저장
+        }).then(res=>res.json())        // 리턴값이 있으면 리턴값에 맞는 req 지정
+          .then(res=> {
+            console.log("[2.postBrandName] POST요청으로 Back에 넘겨준 값:",res);          // 리턴값에 대한 처리
+          });
   }
     return (
      
@@ -22,20 +60,10 @@ function FilterBrand() {
        </div>
        <div className={dropdown?"dropdown_b_wrapper":"dropdown_b_wrapper_n"}>
         <div className="brand" onClick={clickMLB}>MLB</div>
-        <div className="brand">DISCOVERY</div>
-        <div className="brand">MLB Kids</div>
-        <div className="brand">STRETCH ANGELS</div>
-        <div className="brand">DUVETICA</div>
-
-        {/* "MLB": "M",
-
-  "DISCOVERY": "X",
-
-  "MLB Kids":"I",
-
-  "STRETCH ANGELS":"A",
-
-  "DUVETICA": "V" */}
+        <div className="brand" onClick={clickDISCOVERY}>DISCOVERY</div>
+        <div className="brand" onClick={clickMLBKids}>MLB Kids</div>
+        <div className="brand" onClick={clickSA}>STRETCH ANGELS</div>
+        <div className="brand" onClick={clickDV}>DUVETICA</div>
 
        </div>
       </div>

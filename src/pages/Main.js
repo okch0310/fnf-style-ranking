@@ -18,19 +18,13 @@ function Main() {
 
     useEffect(() => {
         get();
-    }, [])
-
-    //console.log("?",tableData);
+    }, []) 
   
     return (
       <div>
         <Header/>
-
         <FilterWrapper />
-       
-        <DataTable tableData={tableData} />
-   
-        
+        {tableData && <DataTable tableData={tableData} />}
       </div>
     );
   }
