@@ -12,24 +12,30 @@ function FilterBrand() {
   
   function clickMLB(){
     
-    setBrand("M");
+    setBrand("MLB");
+    postBrandName("M");
+    setDropdown(!dropdown)
   }
   function clickDISCOVERY(){
-
+    setBrand("DISCOVERY");
     postBrandName("X");
+    setDropdown(!dropdown)
   }
 
   function clickMLBKids(){
- 
+    setBrand("MLB KIDS");
     postBrandName("I");
-
+    setDropdown(!dropdown)
   }
   function clickSA(){
-    
+    setBrand("STRETCH ANGELS");
    postBrandName("A");
+   setDropdown(!dropdown)
   }
   function clickDV(){
+    setBrand("DUVETICA");
    postBrandName("V");
+   setDropdown(!dropdown)
   }
 
   useEffect(() => {
@@ -55,13 +61,13 @@ function FilterBrand() {
       <div>
        
        <div className="dropdown_s_wrapper" onClick={clickDropdown}>
-        <div className="brand_name">STRETCH ANGELS</div>
+        <div className="brand_name">{brand}</div>
         <div className="icon">▿</div>
        </div>
        <div className={dropdown?"dropdown_b_wrapper":"dropdown_b_wrapper_n"}>
         <div className="brand" onClick={clickMLB}>MLB</div>
         <div className="brand" onClick={clickDISCOVERY}>DISCOVERY</div>
-        <div className="brand" onClick={clickMLBKids}>MLB Kids</div>
+        <div className="brand" onClick={clickMLBKids}>MLB KIDS</div>
         <div className="brand" onClick={clickSA}>STRETCH ANGELS</div>
         <div className="brand" onClick={clickDV}>DUVETICA</div>
 

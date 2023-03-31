@@ -33,13 +33,16 @@
 .dropdown_b_wrapper{
     display: flex;
     flex-direction: column;
-    background-color:pink;
+    
     border-radius: 5px;
+    border: 3px solid gray;
+    background-color: white;
+
     height: 200px;
     margin-top: 5px;
 
     .brand{
-        background-color: pink;
+        
         margin: 5px;
         height: 30px;
         text-align: center;

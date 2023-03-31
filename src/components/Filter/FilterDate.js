@@ -1,7 +1,11 @@
+import "../../styles/Filter/filter_date.scss"
+
 function FilterDate() {
+
+  
     return (
-      <div>
-       FilterDate
+      <div className="filter_date">
+        날짜 선택
       </div>
     );
   }
